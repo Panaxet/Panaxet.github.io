@@ -116,6 +116,11 @@
             border-radius: var(--radius);
             border-left: 4px solid var(--accent);
             position: relative;
+            min-height: 180px;
+        }
+
+        .quote-content {
+            margin-right: 60px;
         }
 
         .quote {
@@ -123,6 +128,10 @@
             font-style: italic;
             line-height: 1.6;
             margin-bottom: 15px;
+            min-height: 4.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .author {
@@ -134,8 +143,10 @@
         .quote-nav {
             position: absolute;
             right: 20px;
-            bottom: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
+            flex-direction: column;
             gap: 10px;
         }
 
@@ -143,8 +154,8 @@
             background: rgba(255,255,255,0.2);
             border: none;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             cursor: pointer;
             transition: var(--transition);
@@ -565,7 +576,10 @@
             
             .quote-nav {
                 right: 10px;
-                bottom: 10px;
+            }
+            
+            .quote-content {
+                margin-right: 50px;
             }
         }
     </style>
@@ -589,8 +603,10 @@
                 <p class="subtitle">Учитель начальных классов</p>
                 
                 <div class="quote-section">
-                    <p class="quote" id="currentQuote">"Ученик - это не сосуд, который надо наполнить, а факел, который надо зажечь"</p>
-                    <p class="author" id="currentAuthor">— Лев Толстой</p>
+                    <div class="quote-content">
+                        <p class="quote" id="currentQuote">"Ученик - это не сосуд, который надо наполнить, а факел, который надо зажечь"</p>
+                        <p class="author" id="currentAuthor">— Лев Толстой</p>
+                    </div>
                     <div class="quote-nav">
                         <button class="quote-arrow" onclick="prevQuote()">
                             <i class="fas fa-chevron-left"></i>
@@ -680,20 +696,23 @@
         <div class="section section-gray">
             <div class="container">
                 <h2 class="section-title">Мои награды и грамоты</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--text-light); font-size: 1.1em;">
+                    Раздел в процессе наполнения
+                </p>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
-                        <div class="portfolio-image">
-                            <img src="images/Tech/T_1.jpg" alt="Награда 1">
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
+                            <i class="fas fa-trophy"></i>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_2.jpg')">
-                        <div class="portfolio-image">
-                            <img src="images/Tech/T_2.jpg" alt="Награда 2">
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
+                            <i class="fas fa-award"></i>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
-                        <div class="portfolio-image">
-                            <img src="images/Tech/T_3.jpg" alt="Награда 3">
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
+                            <i class="fas fa-medal"></i>
                         </div>
                     </div>
                 </div>
@@ -706,34 +725,31 @@
             <div class="container">
                 <h2 class="section-title">Мое портфолио</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                            <i class="fas fa-graduation-cap"></i>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_1.jpg" alt="Повышение квалификации">
                         </div>
                         <div class="portfolio-content">
                             <h3>Повышение квалификации</h3>
                             <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                            <i class="fas fa-award"></i>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_2.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_2.jpg" alt="Повышение квалификации">
                         </div>
                         <div class="portfolio-content">
-                            <h3>Благодарности</h3>
-                            <p>Благодарственные письма от родителей и администрации школы за высокие результаты работы</p>
+                            <h3>Повышение квалификации</h3>
+                            <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/1.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/uch/1.jpg" alt="Результаты учеников">
+                            <img src="images/Tech/T_3.jpg" alt="Повышение квалификации">
                         </div>
                         <div class="portfolio-content">
-                            <h3>Результаты учеников</h3>
-                            <p>Достижения моих учеников в олимпиадах, конкурсах и научно-практических конференциях</p>
-                            <a href="#portfolio" class="modern-btn" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
-                                <i class="fas fa-external-link-alt"></i> Перейти к результатам
-                            </a>
+                            <h3>Повышение квалификации</h3>
+                            <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
                         </div>
                     </div>
                 </div>
