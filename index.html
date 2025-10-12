@@ -465,6 +465,8 @@
             max-width: 90%;
             max-height: 90%;
             margin-top: 2%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
         }
 
         .close {
@@ -476,6 +478,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            z-index: 2001;
         }
 
         .close:hover {
@@ -524,6 +527,11 @@
             
             .messages-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                max-width: 95%;
+                max-height: 80%;
             }
         }
     </style>
@@ -631,19 +639,19 @@
             <div class="container">
                 <h2 class="section-title">Мои награды и грамоты</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma1.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma1.jpg" alt="Грамота за инновации">
+                            <img src="images/Tech/T_1.jpg" alt="Награда 1">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma2.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_2.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma2.jpg" alt="Победитель конкурса">
+                            <img src="images/Tech/T_2.jpg" alt="Награда 2">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma3.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma3.jpg" alt="За творческий подход">
+                            <img src="images/Tech/T_3.jpg" alt="Награда 3">
                         </div>
                     </div>
                 </div>
@@ -656,19 +664,19 @@
             <div class="container">
                 <h2 class="section-title">Мое портфолио</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma2.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/1.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma2.jpg" alt="Повышение квалификации">
+                            <img src="images/uch/1.jpg" alt="Работа с учениками 1">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma3.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/2.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma3.jpg" alt="Благодарности">
+                            <img src="images/uch/2.jpg" alt="Работа с учениками 2">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/diploma4.jpg')">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/3.jpg')">
                         <div class="portfolio-image">
-                            <img src="images/diploma4.jpg" alt="Результаты учеников">
+                            <img src="images/uch/3.jpg" alt="Результаты учеников">
                         </div>
                         <div class="portfolio-content">
                             <a href="#" class="modern-btn" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
@@ -681,6 +689,7 @@
         </div>
     </section>
 
+    <!-- Остальные секции (Сообщения, Материалы, Контакты) остаются без изменений -->
     <section id="messages" class="page">
         <div class="section section-light">
             <div class="container">
@@ -831,10 +840,12 @@
             const modal = document.getElementById('imageModal');
             const closeBtn = document.querySelector('.close');
             
+            // Закрытие модального окна
             closeBtn.onclick = function() {
                 modal.style.display = 'none';
             }
             
+            // Закрытие при клике вне изображения
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = 'none';
