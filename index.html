@@ -629,6 +629,8 @@
             <ul class="nav-links">
                 <li><a href="#" class="nav-link active" data-page="home">Главная</a></li>
                 <li><a href="#" class="nav-link" data-page="portfolio">Портфолио</a></li>
+                <li><a href="#" class="nav-link" data-page="qualification">Повышение квалификации</a></li>
+                <li><a href="#" class="nav-link" data-page="students">Результаты учеников</a></li>
                 <li><a href="#" class="nav-link" data-page="messages">Сообщения</a></li>
                 <li><a href="#" class="nav-link" data-page="materials">Материалы</a></li>
                 <li><a href="#" class="nav-link" data-page="contact">Контакты</a></li>
@@ -696,23 +698,66 @@
         <div class="section section-gray">
             <div class="container">
                 <h2 class="section-title">Мои награды и грамоты</h2>
-                <p style="text-align: center; margin-bottom: 30px; color: var(--text-light); font-size: 1.1em;">
-                    Раздел в процессе наполнения
-                </p>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                            <i class="fas fa-trophy"></i>
+                    <!-- Все 12 фото из main_st -->
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Active_Teacher_Pelina_Marina_Vladimirovna_of_spring_marathon_2025_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Active_Teacher_Pelina_Marina_Vladimirovna_of_spring_marathon_2025_page-0001.jpg" alt="Награда 1">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                            <i class="fas fa-award"></i>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Active_Teacher_Summer_Monthly_Pelina_Marina_Vladimirovna_of_school_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Active_Teacher_Summer_Monthly_Pelina_Marina_Vladimirovna_of_school_page-0001.jpg" alt="Награда 2">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
-                            <i class="fas fa-medal"></i>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Graded_Active_Teacher_Yearly_Pelina_Marina_Vladimirovna_of_school_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Graded_Active_Teacher_Yearly_Pelina_Marina_Vladimirovna_of_school_page-0001.jpg" alt="Награда 3">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_goal_reached_marathon_b2t_24_10_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_goal_reached_marathon_b2t_24_10_page-0001.jpg" alt="Награда 4">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_place_in_school_marathon_b2t_24_8_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_place_in_school_marathon_b2t_24_8_page-0001.jpg" alt="Награда 5">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_place_in_school_marathon_b2t_24_9_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_place_in_school_marathon_b2t_24_9_page-0001.jpg" alt="Награда 6">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Letter_Pelina_Marina_Vladimirovna_1302658_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Letter_Pelina_Marina_Vladimirovna_1302658_page-0001.jpg" alt="Награда 7">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/Letter_Pelina_Marina_Vladimirovna_264284_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/Letter_Pelina_Marina_Vladimirovna_264284_page-0001.jpg" alt="Награда 8">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/active_teacher_expert_year_certificate_Pelina Marina Vladimirovna.pdf_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/active_teacher_expert_year_certificate_Pelina Marina Vladimirovna.pdf_page-0001.jpg" alt="Награда 9">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/certification_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/certification_page-0001.jpg" alt="Награда 10">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/module_certificate_2025-10-12_21_56_35_MSK_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/module_certificate_2025-10-12_21_56_35_MSK_page-0001.jpg" alt="Награда 11">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/main_st/module_certificate_2025-10-12_21_58_16_MSK_page-0001.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/main_st/module_certificate_2025-10-12_21_58_16_MSK_page-0001.jpg" alt="Награда 12">
                         </div>
                     </div>
                 </div>
@@ -726,13 +771,16 @@
                 <h2 class="section-title">Мое портфолио</h2>
                 <div class="portfolio-grid">
                     <!-- Повышение квалификации -->
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
+                    <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div class="portfolio-content">
                             <h3>Повышение квалификации</h3>
                             <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
+                            <a href="#" class="nav-link modern-btn" data-page="qualification" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
+                                <i class="fas fa-external-link-alt"></i> Перейти
+                            </a>
                         </div>
                     </div>
 
@@ -748,13 +796,16 @@
                     </div>
 
                     <!-- Результаты учеников -->
-                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/1.jpg')">
+                    <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="portfolio-content">
                             <h3>Результаты учеников</h3>
                             <p>Достижения моих учеников в олимпиадах, конкурсах и научно-практических конференциях</p>
+                            <a href="#" class="nav-link modern-btn" data-page="students" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
+                                <i class="fas fa-external-link-alt"></i> Перейти
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -762,7 +813,132 @@
         </div>
     </section>
 
-    <!-- Остальные секции остаются без изменений -->
+    <section id="qualification" class="page">
+        <div class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Повышение квалификации</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_1.jpg" alt="Повышение квалификации 1">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_2.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_2.jpg" alt="Повышение квалификации 2">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_3.jpg" alt="Повышение квалификации 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="students" class="page">
+        <div class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Результаты учеников</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/1.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/1.jpg" alt="Результаты учеников 1">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/2.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/2.jpg" alt="Результаты учеников 2">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/3.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/3.jpg" alt="Результаты учеников 3">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/4.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/4.jpg" alt="Результаты учеников 4">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/5.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/5.jpg" alt="Результаты учеников 5">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/6.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/6.jpg" alt="Результаты учеников 6">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/7.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/7.jpg" alt="Результаты учеников 7">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/8.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/8.jpg" alt="Результаты учеников 8">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/9.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/9.jpg" alt="Результаты учеников 9">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/10.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/10.jpg" alt="Результаты учеников 10">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/11.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/11.jpg" alt="Результаты учеников 11">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/12.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/12.jpg" alt="Результаты учеников 12">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/13.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/13.jpg" alt="Результаты учеников 13">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/14.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/14.jpg" alt="Результаты учеников 14">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/15.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/15.jpg" alt="Результаты учеников 15">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/16.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/16.jpg" alt="Результаты учеников 16">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/17.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/17.jpg" alt="Результаты учеников 17">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/uch/18.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/uch/18.jpg" alt="Результаты учеников 18">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Остальные секции (Сообщения, Материалы, Контакты) остаются без изменений -->
     <section id="messages" class="page">
         <div class="section section-light">
             <div class="container">
