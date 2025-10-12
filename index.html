@@ -453,6 +453,77 @@
             color: var(--text);
         }
 
+        /* Галерея */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        .gallery-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .gallery-title {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .gallery-close {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            overflow-y: auto;
+            flex: 1;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
         .modern-footer {
             background: linear-gradient(135deg, var(--text) 0%, #334155 100%);
             color: var(--white);
@@ -581,6 +652,10 @@
             .quote-content {
                 margin-right: 50px;
             }
+            
+            .gallery-images {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -589,6 +664,19 @@
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Галерея портфолио -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-content">
+            <div class="gallery-header">
+                <div class="gallery-title" id="galleryTitle">Галерея</div>
+                <button class="gallery-close" onclick="closeGallery()">&times;</button>
+            </div>
+            <div class="gallery-images" id="galleryImages">
+                <!-- Фотографии будут добавляться сюда -->
+            </div>
+        </div>
     </div>
 
     <header class="modern-header">
@@ -725,7 +813,8 @@
             <div class="container">
                 <h2 class="section-title">Мое портфолио</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_1.jpg')">
+                    <!-- Повышение квалификации -->
+                    <div class="portfolio-item fade-in" onclick="openGallery('tech')">
                         <div class="portfolio-image">
                             <img src="images/Tech/T_1.jpg" alt="Повышение квалификации">
                         </div>
@@ -734,22 +823,26 @@
                             <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_2.jpg')">
-                        <div class="portfolio-image">
-                            <img src="images/Tech/T_2.jpg" alt="Повышение квалификации">
+
+                    <!-- Благодарности -->
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
+                            <i class="fas fa-award"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Повышение квалификации</h3>
-                            <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
+                            <h3>Благодарности</h3>
+                            <p>Благодарственные письма от родителей и администрации школы за высокие результаты работы</p>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
+
+                    <!-- Результаты учеников -->
+                    <div class="portfolio-item fade-in" onclick="openGallery('uch')">
                         <div class="portfolio-image">
-                            <img src="images/Tech/T_3.jpg" alt="Повышение квалификации">
+                            <img src="images/uch/1.jpg" alt="Результаты учеников">
                         </div>
                         <div class="portfolio-content">
-                            <h3>Повышение квалификации</h3>
-                            <p>Сертификаты о прохождении курсов повышения квалификации по современным образовательным технологиям</p>
+                            <h3>Результаты учеников</h3>
+                            <p>Достижения моих учеников в олимпиадах, конкурсах и научно-практических конференциях</p>
                         </div>
                     </div>
                 </div>
@@ -757,7 +850,7 @@
         </div>
     </section>
 
-    <!-- Остальные секции (Сообщения, Материалы, Контакты) остаются без изменений -->
+    <!-- Остальные секции остаются без изменений -->
     <section id="messages" class="page">
         <div class="section section-light">
             <div class="container">
@@ -951,6 +1044,43 @@
             showQuote(currentQuoteIndex);
         }
 
+        // Галерея портфолио
+        function openGallery(type) {
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryTitle = document.getElementById('galleryTitle');
+            const galleryImages = document.getElementById('galleryImages');
+            
+            galleryImages.innerHTML = '';
+            
+            if (type === 'tech') {
+                galleryTitle.textContent = 'Повышение квалификации';
+                // Добавляем 3 фото из Tech
+                for (let i = 1; i <= 3; i++) {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.onclick = () => openModal(`images/Tech/T_${i}.jpg`);
+                    galleryItem.innerHTML = `<img src="images/Tech/T_${i}.jpg" alt="Повышение квалификации ${i}">`;
+                    galleryImages.appendChild(galleryItem);
+                }
+            } else if (type === 'uch') {
+                galleryTitle.textContent = 'Результаты учеников';
+                // Добавляем 3 фото из uch (можно увеличить до 18)
+                for (let i = 1; i <= 3; i++) {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.onclick = () => openModal(`images/uch/${i}.jpg`);
+                    galleryItem.innerHTML = `<img src="images/uch/${i}.jpg" alt="Результаты учеников ${i}">`;
+                    galleryImages.appendChild(galleryItem);
+                }
+            }
+            
+            galleryModal.style.display = 'block';
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = 'none';
+        }
+
         // Случайная цитата при загрузке
         document.addEventListener('DOMContentLoaded', function() {
             currentQuoteIndex = Math.floor(Math.random() * quotes.length);
@@ -967,6 +1097,9 @@
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = 'none';
+                }
+                if (event.target === document.getElementById('galleryModal')) {
+                    closeGallery();
                 }
             }
 
