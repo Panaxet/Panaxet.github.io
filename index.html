@@ -545,6 +545,35 @@
             animation: fadeInUp 0.6s ease-out;
         }
 
+        .main-photos {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 20px;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+        .main-photo {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .main-photo:hover {
+            transform: translateY(-5px);
+        }
+
+        .main-photo img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .main-photo.center img {
+            height: 350px;
+        }
+
         @media (max-width: 768px) {
             .teacher-profile h1 {
                 font-size: 2.5em;
@@ -581,6 +610,16 @@
             .quote-content {
                 margin-right: 50px;
             }
+
+            .main-photos {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .main-photo img,
+            .main-photo.center img {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -594,9 +633,15 @@
     <header class="modern-header">
         <div class="container">
             <div class="teacher-profile fade-in">
-                <div class="avatar-container">
-                    <div class="avatar">
-                        <img src="images/photo.jpg" alt="Пелина Марина Владимировна">
+                <div class="main-photos">
+                    <div class="main-photo left">
+                        <img src="images/glav/photo_1.jpg" alt="Фото 1">
+                    </div>
+                    <div class="main-photo center">
+                        <img src="images/glav/photo_2.jpg" alt="Фото 2">
+                    </div>
+                    <div class="main-photo right">
+                        <img src="images/glav/photo_3.jpg" alt="Фото 3">
                     </div>
                 </div>
                 <h1>Пелина Марина Владимировна</h1>
@@ -643,7 +688,7 @@
                 <div class="modern-card">
                     <div class="about-content">
                         <h3>Профессиональная биография</h3>
-                        <p>Опытный педагог с большим стажем работы в начальной школе. Специализируюсь на развитии критического мышления и творческих способностей у младших школьников. Постоянно совершенствую свои профессиональные навыки через курсы повышения квалификации и участие в педагогических конкурсах.</p>
+                        <p>Опытный педагог, специализируюсь на развитии критического мышления и творческих способностей у младших школьников. Постоянно совершенствую свои профессиональные навыки через курсы повышения квалификации и участие в педагогических конкурсах.</p>
                         
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
                             <div>
@@ -652,7 +697,7 @@
                             </div>
                             <div>
                                 <h4>Специализация</h4>
-                                <p>Начальные классы, развивающее обучение, работа с детьми ОВЗ и инвалидами, инклюзивное образование</p>
+                                <p>Начальные классы, работа с детьми ОВЗ и инвалидами</p>
                             </div>
                             <div>
                                 <h4>Профессиональный подход</h4>
@@ -727,16 +772,6 @@
                             <img src="main_st/Gramota_Pelina_Marina_Vladimirovna_klassa_2_A_place_in_school_marathon_b2t_24_9_page-0001.jpg" alt="">
                         </div>
                     </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('main_st/Letter_Pelina_Marina_Vladimirovna_1302658_page-0001.jpg')">
-                        <div class="portfolio-image">
-                            <img src="main_st/Letter_Pelina_Marina_Vladimirovna_1302658_page-0001.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-in" onclick="openModal('main_st/Letter_Pelina_Marina_Vladimirovna_264284_page-0001.jpg')">
-                        <div class="portfolio-image">
-                            <img src="main_st/Letter_Pelina_Marina_Vladimirovna_264284_page-0001.jpg" alt="">
-                        </div>
-                    </div>
                     <div class="portfolio-item fade-in" onclick="openModal('main_st/active_teacher_expert_year_certificate_Pelina Marina Vladimirovna.pdf_page-0001.jpg')">
                         <div class="portfolio-image">
                             <img src="main_st/active_teacher_expert_year_certificate_Pelina Marina Vladimirovna.pdf_page-0001.jpg" alt="">
@@ -784,6 +819,9 @@
                         <div class="portfolio-content">
                             <h3>Благодарности</h3>
                             <p>Благодарственные письма от родителей и администрации школы за высокие результаты работы</p>
+                            <a href="#" class="nav-link modern-btn" data-page="blagodarnosti" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
+                                <i class="fas fa-external-link-alt"></i> Перейти
+                            </a>
                         </div>
                     </div>
 
@@ -796,6 +834,20 @@
                             <h3>Результаты учеников</h3>
                             <p>Достижения моих учеников в олимпиадах, конкурсах и научно-практических конференциях</p>
                             <a href="#" class="nav-link modern-btn" data-page="students" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
+                                <i class="fas fa-external-link-alt"></i> Перейти
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Фото -->
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Фото</h3>
+                            <p>Фотографии с классом, мероприятиями и школьной жизнью</p>
+                            <a href="#" class="nav-link modern-btn" data-page="class-photos" style="width: auto; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px;">
                                 <i class="fas fa-external-link-alt"></i> Перейти
                             </a>
                         </div>
@@ -823,6 +875,36 @@
                     <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_3.jpg')">
                         <div class="portfolio-image">
                             <img src="images/Tech/T_3.jpg" alt="Повышение квалификации 3">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_4.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_4.jpg" alt="Повышение квалификации 4">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Tech/T_5.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Tech/T_5.jpg" alt="Повышение квалификации 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blagodarnosti" class="page">
+        <div class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Благодарности</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Blag/B_1.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Blag/B_1.jpg" alt="Благодарность 1">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Blag/B_2.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Blag/B_2.jpg" alt="Благодарность 2">
                         </div>
                     </div>
                 </div>
@@ -923,6 +1005,186 @@
                     <div class="portfolio-item fade-in" onclick="openModal('images/uch/18.jpg')">
                         <div class="portfolio-image">
                             <img src="images/uch/18.jpg" alt="Результаты учеников 18">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="class-photos" class="page">
+        <div class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Фото</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_1_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_1_2025-10-13_20-55-28.jpg" alt="Фото класса 1">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_2_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_2_2025-10-13_20-55-28.jpg" alt="Фото класса 2">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_3_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_3_2025-10-13_20-55-28.jpg" alt="Фото класса 3">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_4_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_4_2025-10-13_20-55-28.jpg" alt="Фото класса 4">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_5_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_5_2025-10-13_20-55-28.jpg" alt="Фото класса 5">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_6_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_6_2025-10-13_20-55-28.jpg" alt="Фото класса 6">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_7_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_7_2025-10-13_20-55-28.jpg" alt="Фото класса 7">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_8_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_8_2025-10-13_20-55-28.jpg" alt="Фото класса 8">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_9_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_9_2025-10-13_20-55-28.jpg" alt="Фото класса 9">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_10_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_10_2025-10-13_20-55-28.jpg" alt="Фото класса 10">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_11_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_11_2025-10-13_20-55-28.jpg" alt="Фото класса 11">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_12_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_12_2025-10-13_20-55-28.jpg" alt="Фото класса 12">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_13_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_13_2025-10-13_20-55-28.jpg" alt="Фото класса 13">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_14_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_14_2025-10-13_20-55-28.jpg" alt="Фото класса 14">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_15_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_15_2025-10-13_20-55-28.jpg" alt="Фото класса 15">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_16_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_16_2025-10-13_20-55-28.jpg" alt="Фото класса 16">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_17_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_17_2025-10-13_20-55-28.jpg" alt="Фото класса 17">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_18_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_18_2025-10-13_20-55-28.jpg" alt="Фото класса 18">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_19_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_19_2025-10-13_20-55-28.jpg" alt="Фото класса 19">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_20_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_20_2025-10-13_20-55-28.jpg" alt="Фото класса 20">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_21_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_21_2025-10-13_20-55-28.jpg" alt="Фото класса 21">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_22_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_22_2025-10-13_20-55-28.jpg" alt="Фото класса 22">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_23_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_23_2025-10-13_20-55-28.jpg" alt="Фото класса 23">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_24_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_24_2025-10-13_20-55-28.jpg" alt="Фото класса 24">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_25_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_25_2025-10-13_20-55-28.jpg" alt="Фото класса 25">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_26_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_26_2025-10-13_20-55-28.jpg" alt="Фото класса 26">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_27_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_27_2025-10-13_20-55-28.jpg" alt="Фото класса 27">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_28_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_28_2025-10-13_20-55-28.jpg" alt="Фото класса 28">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_29_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_29_2025-10-13_20-55-28.jpg" alt="Фото класса 29">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_30_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_30_2025-10-13_20-55-28.jpg" alt="Фото класса 30">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_31_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_31_2025-10-13_20-55-28.jpg" alt="Фото класса 31">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_32_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_32_2025-10-13_20-55-28.jpg" alt="Фото класса 32">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_34_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_34_2025-10-13_20-55-28.jpg" alt="Фото класса 34">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_36_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_36_2025-10-13_20-55-28.jpg" alt="Фото класса 36">
                         </div>
                     </div>
                 </div>
