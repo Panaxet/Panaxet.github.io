@@ -78,6 +78,7 @@
             width: 100%;
             height: 400px;
             object-fit: cover;
+            object-position: center 20%; /* Поднято на 20% выше */
             transition: var(--transition);
         }
 
@@ -1036,7 +1037,6 @@
                 </button>
                 <h2 class="section-title">Фото</h2>
                 <div class="portfolio-grid">
-                    <!-- Все 32 фото класса -->
                     <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_1_2025-10-13_20-55-28.jpg')">
                         <div class="portfolio-image">
                             <img src="images/pfoto_class/photo_1_2025-10-13_20-55-28.jpg" alt="Фото класса 1">
@@ -1047,13 +1047,484 @@
                             <img src="images/pfoto_class/photo_2_2025-10-13_20-55-28.jpg" alt="Фото класса 2">
                         </div>
                     </div>
-                    <!-- ... остальные фото ... -->
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_3_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_3_2025-10-13_20-55-28.jpg" alt="Фото класса 3">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_4_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_4_2025-10-13_20-55-28.jpg" alt="Фото класса 4">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_5_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_5_2025-10-13_20-55-28.jpg" alt="Фото класса 5">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_6_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_6_2025-10-13_20-55-28.jpg" alt="Фото класса 6">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_7_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_7_2025-10-13_20-55-28.jpg" alt="Фото класса 7">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_8_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_8_2025-10-13_20-55-28.jpg" alt="Фото класса 8">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_9_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_9_2025-10-13_20-55-28.jpg" alt="Фото класса 9">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_10_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_10_2025-10-13_20-55-28.jpg" alt="Фото класса 10">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_11_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_11_2025-10-13_20-55-28.jpg" alt="Фото класса 11">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_12_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_12_2025-10-13_20-55-28.jpg" alt="Фото класса 12">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_13_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_13_2025-10-13_20-55-28.jpg" alt="Фото класса 13">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_14_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_14_2025-10-13_20-55-28.jpg" alt="Фото класса 14">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_15_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_15_2025-10-13_20-55-28.jpg" alt="Фото класса 15">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_16_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_16_2025-10-13_20-55-28.jpg" alt="Фото класса 16">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_17_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_17_2025-10-13_20-55-28.jpg" alt="Фото класса 17">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_18_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_18_2025-10-13_20-55-28.jpg" alt="Фото класса 18">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_19_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_19_2025-10-13_20-55-28.jpg" alt="Фото класса 19">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_20_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_20_2025-10-13_20-55-28.jpg" alt="Фото класса 20">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_21_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_21_2025-10-13_20-55-28.jpg" alt="Фото класса 21">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_22_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_22_2025-10-13_20-55-28.jpg" alt="Фото класса 22">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_23_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_23_2025-10-13_20-55-28.jpg" alt="Фото класса 23">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_24_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_24_2025-10-13_20-55-28.jpg" alt="Фото класса 24">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_25_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_25_2025-10-13_20-55-28.jpg" alt="Фото класса 25">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_26_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_26_2025-10-13_20-55-28.jpg" alt="Фото класса 26">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_27_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_27_2025-10-13_20-55-28.jpg" alt="Фото класса 27">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_28_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_28_2025-10-13_20-55-28.jpg" alt="Фото класса 28">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_29_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_29_2025-10-13_20-55-28.jpg" alt="Фото класса 29">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_30_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_30_2025-10-13_20-55-28.jpg" alt="Фото класса 30">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_31_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_31_2025-10-13_20-55-28.jpg" alt="Фото класса 31">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_32_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_32_2025-10-13_20-55-28.jpg" alt="Фото класса 32">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_34_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_34_2025-10-13_20-55-28.jpg" alt="Фото класса 34">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/photo_36_2025-10-13_20-55-28.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/photo_36_2025-10-13_20-55-28.jpg" alt="Фото класса 36">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Остальные секции остаются без изменений -->
+    <!-- Раздел Сообщения -->
+    <section id="messages" class="page">
+        <div class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Связь с преподавателем</h2>
+                <p style="text-align: center; margin-bottom: 40px; font-size: 1.1em; color: var(--text-light);">
+                    Здесь вы можете задать мне любые вопросы, связанные с образовательным процессом
+                </p>
+                <div class="messages-container">
+                    <div class="message-form fade-in">
+                        <h3>Написать сообщение</h3>
+                        <form action="https://formsubmit.co/marina.pelina@bk.ru" method="POST" id="messageForm">
+                            <input type="hidden" name="_subject" value="Новое сообщение с сайта учителя">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <div class="form-group">
+                                <label>Ваше имя</label>
+                                <input type="text" name="name" class="modern-input" placeholder="Введите ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Ваш email</label>
+                                <input type="email" name="email" class="modern-input" placeholder="Введите ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Сообщение</label>
+                                <textarea name="message" class="modern-textarea" placeholder="Напишите ваше сообщение..." required></textarea>
+                            </div>
+                            <button type="submit" class="modern-btn">
+                                <i class="fas fa-paper-plane"></i> Отправить сообщение
+                            </button>
+                        </form>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: var(--text-light); text-align: center;">
+                            Сообщение будет отправлено на мою почту. Отвечаю в течение 24 часов.
+                        </p>
+                    </div>
+                    <div class="message-thread fade-in">
+                        <h3>История сообщений</h3>
+                        <div class="message teacher">
+                            <div class="message-header">
+                                <span>Пелина М.В.</span>
+                                <span>Сегодня</span>
+                            </div>
+                            <p>Здравствуйте! Я готова ответить на все ваши вопросы. Пишите - обязательно отвечу!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Материалы -->
+    <section id="materials" class="page">
+        <div class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Методические материалы</h2>
+                <div class="modern-card fade-in">
+                    <div class="file-manager">
+                        <div class="file-list" style="margin-top: 30px;">
+                            <!-- Контрольные работы -->
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>3класс контрольные работы</strong>
+                                        <p>DOCX • 3 класс</p>
+                                    </div>
+                                </div>
+                                <a href="materials/3класс контрольные работы (1).docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Входная контрольная работа по математике 3 класс</strong>
+                                        <p>DOCX • 3 класс</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Входная контрольная работа по математике 3 класс.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <!-- Карточки -->
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Карточка по окружающему миру 3 класс</strong>
+                                        <p>DOCX • 3 класс</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Карточка по окружающему миру 3 класс.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Карточки Окончание как изменяемая часть слова</strong>
+                                        <p>DOCX • Русский язык</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Карточки Окончание как изменяемая часть слова.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Карточки Словосочетание русский язык 3 класс</strong>
+                                        <p>DOCX • Русский язык</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Карточки Словосочетание русский язык 3 класс.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Карточки главные и второстепенные члены предложений</strong>
+                                        <p>DOCX • Русский язык</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Карточки главные и второстепенные члены предложений.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Карточки с примерами на порядок действия</strong>
+                                        <p>DOCX • Математика</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Карточки с примерами на порядок действия.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <!-- Методические разработки -->
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>МЕТОДИЧЕСКАЯ РАЗРАБОТКА Открытый урок по литературному чтению</strong>
+                                        <p>DOCX • Литературное чтение</p>
+                                    </div>
+                                </div>
+                                <a href="materials/МЕТОДИЧЕСКАЯ РАЗРАБОТКА Открытый урок по литературному чтению. Тема В.В. Голявкин «Никакой я горчицы не ел»..docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Методическая разработка Развитие активного словарного запаса</strong>
+                                        <p>DOCX • Методика</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Методическая разработка Развитие активного словарного запаса у младших школьников..docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Методическая разработка Задачи 3 класс</strong>
+                                        <p>DOCX • Математика</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Методическая разработка Задачи 3 класс.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Методическая разработка урока по литературному чтению</strong>
+                                        <p>DOCX • Литературное чтение</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Методическая разработка урока по литературному чтению.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <!-- Памятки -->
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Памятки детям и родителям Весна</strong>
+                                        <p>DOCX • Воспитательная работа</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Памятки детям и родителям Весна.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Памятки детям и родителям Зима</strong>
+                                        <p>DOCX • Воспитательная работа</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Памятки детям и родителям Зима.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Памятки детям и родителям Лето</strong>
+                                        <p>DOCX • Воспитательная работа</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Памятки детям и родителям Лето.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+
+                            <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
+                                <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
+                                    <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
+                                    <div>
+                                        <strong>Памятки детям и родителям Осень</strong>
+                                        <p>DOCX • Воспитательная работа</p>
+                                    </div>
+                                </div>
+                                <a href="materials/Памятки детям и родителям Осень.docx" download class="modern-btn" style="width: auto; padding: 10px 20px; text-decoration: none; display: inline-block;">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Контакты -->
+    <section id="contact" class="page">
+        <div class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="modern-cards">
+                    <div class="modern-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>marina.pelina@bk.ru</p>
+                    </div>
+                    <div class="modern-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Телефон</h3>
+                        <p>+7 (918) 112-99-79</p>
+                    </div>
+                    <div class="modern-card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>Место работы</h3>
+                        <p><a href="https://school7-pereprava.mostobr.ru" target="_blank" style="color: var(--primary); text-decoration: none;">МБОУ СОШ № 7<br>ст. Переправная</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: marina.pelina@bk.ru</p>
+                    <p>Телефон: +7 (918) 112-99-79</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <p><a href="#" class="nav-link" data-page="home" style="color: white;">Главная</a></p>
+                    <p><a href="#" class="nav-link" data-page="portfolio" style="color: white;">Портфолио</a></p>
+                    <p><a href="#" class="nav-link" data-page="messages" style="color: white;">Сообщения</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Коллекция цитат
@@ -1070,7 +1541,26 @@
                 text: '"Воспитание происходит всегда, даже тогда, когда вас нет дома"',
                 author: "— Антон Макаренко"
             },
-            // ... остальные цитаты ...
+            {
+                text: '"Дети должны жить в мире красоты, игры, сказки, музыки, рисунка, фантазии, творчества"',
+                author: "— Василий Сухомлинский"
+            },
+            {
+                text: '"Воспитание представляется сложным и трудным делом только до тех пор, пока мы хотим, не воспитывая себя, воспитывать своих детей"',
+                author: "— Лев Толстой"
+            },
+            {
+                text: '"Учитель учит до тех пор, пока учится сам"',
+                author: "— Константин Ушинский"
+            },
+            {
+                text: '"В человеке должно быть все прекрасно: и лицо, и одежда, и душа, и мысли"',
+                author: "— Антон Чехов"
+            },
+            {
+                text: '"Чтобы быть хорошим преподавателем, нужно любить то, что преподаешь, и любить тех, кому преподаешь"',
+                author: "— Василий Ключевский"
+            }
         ];
 
         // Коллекция фото
@@ -1172,6 +1662,45 @@
             }
             
             showPage('home');
+
+            // Обработчик формы
+            const messageForm = document.getElementById('messageForm');
+            if (messageForm) {
+                messageForm.addEventListener('submit', function(e) {
+                    const btn = this.querySelector('button');
+                    const originalText = btn.innerHTML;
+                    
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        const name = document.querySelector('input[name="name"]').value;
+                        const messageText = document.querySelector('textarea[name="message"]').value;
+                        
+                        const messageThread = document.querySelector('.message-thread');
+                        const newMessage = document.createElement('div');
+                        newMessage.className = 'message user';
+                        newMessage.innerHTML = `
+                            <div class="message-header">
+                                <span>${name}</span>
+                                <span>${new Date().toLocaleDateString()}</span>
+                            </div>
+                            <p>${messageText}</p>
+                        `;
+                        messageThread.appendChild(newMessage);
+                        messageThread.scrollTop = messageThread.scrollHeight;
+                        
+                        btn.innerHTML = '<i class="fas fa-check"></i> Отправлено!';
+                        btn.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+                        
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                            btn.style.background = '';
+                        }, 3000);
+                    }, 2000);
+                });
+            }
         });
 
         // Модальное окно для фото
