@@ -78,7 +78,7 @@
             width: 100%;
             height: 400px;
             object-fit: cover;
-            object-position: center 20%; /* Поднято на 20% выше */
+            object-position: center 20%;
             transition: var(--transition);
         }
 
@@ -525,7 +525,6 @@
             display: block;
         }
 
-        /* Модальное окно для фото */
         .modal {
             display: none;
             position: fixed;
@@ -637,7 +636,6 @@
     </style>
 </head>
 <body>
-    <!-- Модальное окно для фото -->
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -810,7 +808,6 @@
             <div class="container">
                 <h2 class="section-title">Мое портфолио</h2>
                 <div class="portfolio-grid">
-                    <!-- Повышение квалификации -->
                     <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-graduation-cap"></i>
@@ -824,7 +821,6 @@
                         </div>
                     </div>
 
-                    <!-- Благодарности -->
                     <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-award"></i>
@@ -838,7 +834,6 @@
                         </div>
                     </div>
 
-                    <!-- Результаты учеников -->
                     <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-chart-line"></i>
@@ -852,7 +847,6 @@
                         </div>
                     </div>
 
-                    <!-- Фото -->
                     <div class="portfolio-item fade-in">
                         <div class="portfolio-image" style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">
                             <i class="fas fa-camera"></i>
@@ -919,6 +913,11 @@
                     <div class="portfolio-item fade-in" onclick="openModal('images/Blag/B_2.jpg')">
                         <div class="portfolio-image">
                             <img src="images/Blag/B_2.jpg" alt="Благодарность 2">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/Blag/B_3.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/Blag/B_3.jpg" alt="Благодарность 3">
                         </div>
                     </div>
                 </div>
@@ -1207,12 +1206,31 @@
                             <img src="images/pfoto_class/photo_36_2025-10-13_20-55-28.jpg" alt="Фото класса 36">
                         </div>
                     </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/1_1.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/1_1.jpg" alt="Фото класса 33">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/1_2.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/1_2.jpg" alt="Фото класса 34">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/1_3.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/1_3.jpg" alt="Фото класса 35">
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" onclick="openModal('images/pfoto_class/1_4.jpg')">
+                        <div class="portfolio-image">
+                            <img src="images/pfoto_class/1_4.jpg" alt="Фото класса 36">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Раздел Сообщения -->
     <section id="messages" class="page">
         <div class="section section-light">
             <div class="container">
@@ -1263,7 +1281,6 @@
         </div>
     </section>
 
-    <!-- Раздел Материалы -->
     <section id="materials" class="page">
         <div class="section section-gray">
             <div class="container">
@@ -1271,7 +1288,6 @@
                 <div class="modern-card fade-in">
                     <div class="file-manager">
                         <div class="file-list" style="margin-top: 30px;">
-                            <!-- Контрольные работы -->
                             <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
                                 <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
                                     <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
@@ -1298,7 +1314,6 @@
                                 </a>
                             </div>
 
-                            <!-- Карточки -->
                             <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
                                 <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
                                     <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
@@ -1364,7 +1379,6 @@
                                 </a>
                             </div>
 
-                            <!-- Методические разработки -->
                             <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
                                 <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
                                     <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
@@ -1417,7 +1431,6 @@
                                 </a>
                             </div>
 
-                            <!-- Памятки -->
                             <div class="file-item" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--light-gray); border-radius: 12px; margin-bottom: 15px;">
                                 <div class="file-info" style="display: flex; align-items: center; gap: 15px;">
                                     <i class="fas fa-file-word" style="font-size: 1.5em; color: #2b579a;"></i>
@@ -1476,7 +1489,6 @@
         </div>
     </section>
 
-    <!-- Раздел Контакты -->
     <section id="contact" class="page">
         <div class="section section-light">
             <div class="container">
@@ -1501,7 +1513,7 @@
                             <i class="fas fa-school"></i>
                         </div>
                         <h3>Место работы</h3>
-                        <p><a href="https://school7-pereprava.mostobr.ru" target="_blank" style="color: var(--primary); text-decoration: none;">МБОУ СОШ № 7<br>ст. Переправная</a></p>
+                        <p><a href="https://school7-pereprava.mostobr.ru" target="_blank" style="color: var(--primary); text-decoration: none;">МБОУ СОШ №7 имени Н.М. Кузнецова<br>ст. Переправная</a></p>
                     </div>
                 </div>
             </div>
@@ -1527,7 +1539,6 @@
     </footer>
 
     <script>
-        // Коллекция цитат
         const quotes = [
             {
                 text: '"Ученик - это не сосуд, который надо наполнить, а факел, который надо зажечь"',
@@ -1563,7 +1574,6 @@
             }
         ];
 
-        // Коллекция фото
         const photos = [
             'images/glav/photo_1.jpg',
             'images/glav/photo_2.jpg',
@@ -1571,7 +1581,7 @@
         ];
 
         let currentQuoteIndex = 0;
-        let currentPhotoIndex = 1; // Начинаем с photo_2
+        let currentPhotoIndex = 1;
 
         function showQuote(index) {
             const quoteElement = document.getElementById('currentQuote');
@@ -1605,7 +1615,6 @@
             showPhoto(currentPhotoIndex);
         }
 
-        // Навигация
         function showPage(pageId, scrollToTop = false) {
             const pages = document.querySelectorAll('.page');
             for (let i = 0; i < pages.length; i++) {
@@ -1625,19 +1634,16 @@
                 }
             }
             
-            // Скролл только для главной страницы
             if (scrollToTop || pageId === 'home') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
 
-        // Инициализация
         document.addEventListener('DOMContentLoaded', function() {
             currentQuoteIndex = Math.floor(Math.random() * quotes.length);
             showQuote(currentQuoteIndex);
             showPhoto(currentPhotoIndex);
 
-            // Модальное окно для фото
             const modal = document.getElementById('imageModal');
             const closeBtn = document.querySelector('.close');
             
@@ -1651,7 +1657,6 @@
                 }
             }
 
-            // Навигация
             const navLinks = document.querySelectorAll('.nav-link');
             for (let i = 0; i < navLinks.length; i++) {
                 navLinks[i].addEventListener('click', function(e) {
@@ -1663,7 +1668,6 @@
             
             showPage('home');
 
-            // Обработчик формы
             const messageForm = document.getElementById('messageForm');
             if (messageForm) {
                 messageForm.addEventListener('submit', function(e) {
@@ -1703,7 +1707,6 @@
             }
         });
 
-        // Модальное окно для фото
         function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
